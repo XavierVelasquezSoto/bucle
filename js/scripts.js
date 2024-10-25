@@ -74,6 +74,13 @@ evenNumbers(24, 48);
 
 //7 - Crea una función que genere 2 arrays y los rellene con 5 números aleatorios cada uno, la función debe decir qué valores se han repetido en los dos arrays.
 
+const randomNumber = (num1, num2) => {
+  for (let i = numb1; i <= num2; i++) {
+    console.log(i.Math.floor(Math.random() * 11));
+  }
+};
+randomNumber([1, 2, 3, 4, 5], [6, 7, 8, 9, 10]);
+
 //8 - Crea una función que reciba un número y te diga si es primo o no. Un número primo es aquel que sólo puede dividirse por si mismo
 
 //9 - Crea una función que reciba un array de 10 números, imprime por consola cada número, su cuadrado y su cubo en este formato: "Número: 2 \- Cuadrado: 4 \- Cubo: 8". Nota: Dentro del objeto Math existe el método pow. Math.pow(número, exponente)
