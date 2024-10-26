@@ -52,11 +52,12 @@ inverseMultiplicationTable(4);
 
 const birthday = (year, each) => {
   console.log(`Naciste ${year}`);
-  for (let i = 1; i < 5; i++) {
-    console.log(`En el año ${2024 - each + i} cumpliste ${i} año`); /* 
-    console.log(`En el año ${2024 - each + i} cumpliste ${i} año`); */
-
-    // hay que añadir if para el año y años else if
+  for (let i = 1; i <= 5; i++) {
+    if(i <= 1){
+    console.log(`En el año ${year - each + i} cumpliste ${i} año`);
+  }else if(i >= 2){
+    console.log(`En el año ${year - each + i} cumpliste ${i} años`);
+    }
   }
 };
 birthday(2024, 32);
@@ -74,26 +75,73 @@ evenNumbers(24, 48);
 
 //7 - Crea una función que genere 2 arrays y los rellene con 5 números aleatorios cada uno, la función debe decir qué valores se han repetido en los dos arrays.
 
-const randomNumber = (num1, num2) => {
-  for (let i = numb1; i <= num2; i++) {
-    console.log(i.Math.floor(Math.random() * 11));
+const randomNumber = () => {
+  let randomArray1 = []
+  let randomArray2 = []
+  let randomArray3 = []
+
+  for (let i = 0; i <= 4; i++) {
+    let firstNum = Math.floor(Math.random() * 11)
+    randomArray1.push(firstNum)
+    
+    let secondNum = Math.floor(Math.random() * 11)
+    randomArray2.push(secondNum)
+    }
+  for (let i = 0; i < randomArray1.length; i++){
+    if(randomArray2.includes(randomArray1[i])){
+      randomArray3.push(randomArray1[i])
+    }
   }
+console.log(randomArray1);
+console.log(randomArray2);
+console.log(`Los valores repetidos son:${randomArray3}`);
 };
-randomNumber([1, 2, 3, 4, 5], [6, 7, 8, 9, 10]);
+randomNumber();
 
 //8 - Crea una función que reciba un número y te diga si es primo o no. Un número primo es aquel que sólo puede dividirse por si mismo
 
 //9 - Crea una función que reciba un array de 10 números, imprime por consola cada número, su cuadrado y su cubo en este formato: "Número: 2 \- Cuadrado: 4 \- Cubo: 8". Nota: Dentro del objeto Math existe el método pow. Math.pow(número, exponente)
 
+const basePower = num => {
+  
+  for (let i = 0; i < num.length; i++){
+    let square = Math.pow(num[i],2)
+    let cube = Math.pow(num[i],3)
+    console.log(`Número: ${num[i]} Cuadrado: ${square} Cubo: ${cube}` )
+  }
+}
+basePower([1,2,3,4,5,6,7,8,9,10])
+
 //10 - Crea una función que reciba una palabra e imprima por consola esa palabra pero con las vocales en mayúscula.
 
+const upperLetters = word => {
+  let letters = ""
+  for (let i = 0; i < word.length; i++){
+    if(word.charAt(i) === "a" || word.charAt(i) === "e" || word.charAt(i) === "i" || word.charAt(i) === "o" || word.charAt(i) === "u"){
+      letters += word.charAt(i).toUpperCase()
+    }
+    
+  }
+  console.log(letters)
+}
+upperLetters("bienvenido")
+
+
 //11 - Crea una función que reciba una frase e imprima el número de veces que se repite cada vocal, por ejemplo para la frase "Enrique ordeña cabras", el resultado por consola debe ser: a: 3, e: 3, i: 1, o: 1, u: 1
+
+
 
 // 12 - Crea una función que reciba dos palabras e intercale las letras de cada una para formar una nueva palabra. Si la función recibe (hola, adios) el resultado será "haodliao", pero si recibe (adios, hola) el resultado será "ahdoiloa"
 
 // 13 - Crea una función que reciba una palabra e imprima la misma palabra en orden inverso conservando las mayúsculas y las minúsculas. Si recibe "Mariposas" deberá imprimir "sasopiraM"
 
 //14 - Crea una función que reciba un array con 5 palabras, debes imprimir por consola un array que contenga la inicial y la última letra de cada palabra en mayúsculas, es decir, si nuestra función recibiera un array con \['hola', 'adios', 'gato', 'perro', 'casa'\] deberá imprimir por consola \['H', 'A', 'A', 'S', 'G', 'O', 'P','O', 'C', 'A'\]
+
+
+
+
+
+
 
 /* for (let counter = 0; counter <= 10; counter++) {
   console.log(counter);
