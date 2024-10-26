@@ -96,7 +96,7 @@ console.log(randomArray1);
 console.log(randomArray2);
 console.log(`Los valores repetidos son:${randomArray3}`);
 };
-randomNumber();
+randomNumber();  // explicación  
 
 //8 - Crea una función que reciba un número y te diga si es primo o no. Un número primo es aquel que sólo puede dividirse por si mismo
 
@@ -117,21 +117,83 @@ basePower([1,2,3,4,5,6,7,8,9,10])
 const upperLetters = word => {
   let letters = ""
   for (let i = 0; i < word.length; i++){
-    if(word.charAt(i) === "a" || word.charAt(i) === "e" || word.charAt(i) === "i" || word.charAt(i) === "o" || word.charAt(i) === "u"){
+    if(word.charAt(i).toUpperCase() === "A" || word.charAt(i).toUpperCase() === "E" || word.charAt(i).toUpperCase() === "I" || word.charAt(i).toUpperCase() === "O" || word.charAt(i).toUpperCase() === "U"){
       letters += word.charAt(i).toUpperCase()
+    }else{
+      letters += word.charAt(i)
     }
     
   }
   console.log(letters)
 }
-upperLetters("bienvenido")
+upperLetters("bienvenido")  // necesito explicacion si esta bien y por que
 
 
 //11 - Crea una función que reciba una frase e imprima el número de veces que se repite cada vocal, por ejemplo para la frase "Enrique ordeña cabras", el resultado por consola debe ser: a: 3, e: 3, i: 1, o: 1, u: 1
 
+const phrase = letters => {
+ 
+ let countVowels1 = 0
+ let countVowels2 = 0
+ let countVowels3 = 0
+ let countVowels4 = 0
+ let countVowels5 = 0
+  for (let i = 0; i < letters.length; i++){
+    
+    if(letters.charAt(i) === "a" || letters.charAt(i) === "A"){
+      countVowels1+= letters.includes(letters)
+    }
+    if(letters.charAt(i) === "e" || letters.charAt(i) === "E"){
+      countVowels2+= letters.includes(letters)
+    }
+    if(letters.charAt(i) === "i" || letters.charAt(i) === "I"){
+      countVowels3+= letters.includes(letters)
+    }
+    if(letters.charAt(i) === "o" || letters.charAt(i) === "O"){
+      countVowels4+= letters.includes(letters)
+    }
+    if(letters.charAt(i) === "u" || letters.charAt(i) === "U"){
+      countVowels5+= letters.includes(letters)
+    }
+    
+  }
+  console.log(`El número de vocales es: a:${countVowels1}, e:${countVowels2} , i:${countVowels3} , o:${countVowels4} , u:${countVowels5} `)
+}
+phrase("El mundo no es un problema; el problema es tu desconocimiento")
 
+/* const phrase = letters => {
+ 
+  let countVowels1 = 0
+  let countVowels2 = 0
+  let countVowels3 = 0
+  let countVowels4 = 0
+  let countVowels5 = 0
+   for (let i = 0; i < letters.length; i++){
+     
+     if(letters.charAt(i) === "a"){
+       countVowels1+= letters.includes(letters)
+     }
+     if(letters.charAt(i) === "e"){
+       countVowels2+= letters.includes(letters)
+     }
+     if(letters.charAt(i) === "i"){
+       countVowels3+= letters.includes(letters)
+     }
+     if(letters.charAt(i) === "o"){
+       countVowels4+= letters.includes(letters)
+     }
+     if(letters.charAt(i) === "p"){
+       countVowels5+= letters.includes(letters)
+     }
+     
+   }
+   console.log(`El número de vocales es: a:${countVowels1}, e:${countVowels2} , i:${countVowels3} , o:${countVowels4} , u:${countVowels5} `)
+ }
+ phrase("El mundo no es un problema; el problema es tu desconocimiento") */
 
 // 12 - Crea una función que reciba dos palabras e intercale las letras de cada una para formar una nueva palabra. Si la función recibe (hola, adios) el resultado será "haodliao", pero si recibe (adios, hola) el resultado será "ahdoiloa"
+
+
 
 // 13 - Crea una función que reciba una palabra e imprima la misma palabra en orden inverso conservando las mayúsculas y las minúsculas. Si recibe "Mariposas" deberá imprimir "sasopiraM"
 
