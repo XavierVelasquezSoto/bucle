@@ -201,7 +201,7 @@ const insert = (wordA, wordB) => {
   }
   console.log(mixLetters)
 }
-insert("adios","hola")
+insert("adios","hola") // no estoy seguro si deberia de usar 2 if aqui para palabras inversa
 
 // 13 - Crea una función que reciba una palabra e imprima la misma palabra en orden inverso conservando las mayúsculas y las minúsculas. Si recibe "Mariposas" deberá imprimir "sasopiraM"
 
