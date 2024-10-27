@@ -193,11 +193,85 @@ phrase("El mundo no es un problema; el problema es tu desconocimiento")
 
 // 12 - Crea una función que reciba dos palabras e intercale las letras de cada una para formar una nueva palabra. Si la función recibe (hola, adios) el resultado será "haodliao", pero si recibe (adios, hola) el resultado será "ahdoiloa"
 
-
+const insert = (wordA, wordB) => {
+  let mixLetters = ""
+  let math = Math.max(wordA.length, wordB.length)
+  for(i=0; i <= math; i++){
+    mixLetters+= wordA.charAt(i)+wordB.charAt(i)
+  }
+  console.log(mixLetters)
+}
+insert("adios","hola")
 
 // 13 - Crea una función que reciba una palabra e imprima la misma palabra en orden inverso conservando las mayúsculas y las minúsculas. Si recibe "Mariposas" deberá imprimir "sasopiraM"
 
+
+const newLetters = word => {
+  let letters = ""
+
+  for(i = word.length -1; i >= 0; i--){
+
+    letters += word[i]
+
+  }
+  console.log(letters)
+}
+newLetters("Consejos")
+
+/* const newLetters = word => {
+  let letters = ""
+
+  for(i=0; i < word.length; i++){
+
+    letters += word.charAt(7,0) + word.charAt(6) + word.charAt(5) + word.charAt(4) + word.charAt(3) + word.charAt(2) + word.charAt(1) + word.charAt(0)
+
+  }
+  console.log(letters[i-8] + letters[i-7]+ letters[i-6] + letters[i-5] + letters[i-4] + letters[i-3] + letters[i-2] + letters[i-1] )
+}
+newLetters("Consejos") */
+
 //14 - Crea una función que reciba un array con 5 palabras, debes imprimir por consola un array que contenga la inicial y la última letra de cada palabra en mayúsculas, es decir, si nuestra función recibiera un array con \['hola', 'adios', 'gato', 'perro', 'casa'\] deberá imprimir por consola \['H', 'A', 'A', 'S', 'G', 'O', 'P','O', 'C', 'A'\]
+
+
+
+const fiveLetters = array => {
+  let newArray = []
+  for(i = 0; i < array.length; i++){
+    newArray.push(array[i].charAt(0).toUpperCase())
+    newArray.push(array[i].charAt(array[i].length-1).toUpperCase())
+    
+  }
+  console.log(newArray)
+}
+fiveLetters(["militar", "rodilleras", "bombardear", "boquilla", "lenguaje"])
+
+
+/* const fiveLetters = array => {
+  let newArray = []
+  for(i = 0; i < array.length; i++){
+    newArray+= array[i].charAt(0).toUpperCase() + array[i].charAt(array[i].length-1).toUpperCase()
+    
+    
+  }
+  console.log(newArray)
+}
+fiveLetters(["militar", "rodilleras", "bombardear", "boquilla", "lenguaje"]) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
