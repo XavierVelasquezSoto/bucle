@@ -117,7 +117,7 @@ basePower([1,2,3,4,5,6,7,8,9,10])
 const upperLetters = word => {
   let letters = ""
   for (let i = 0; i < word.length; i++){
-    if(word.charAt(i).toUpperCase() === "A" || word.charAt(i).toUpperCase() === "E" || word.charAt(i).toUpperCase() === "I" || word.charAt(i).toUpperCase() === "O" || word.charAt(i).toUpperCase() === "U"){
+    if(word.charAt(i) === "a" || word.charAt(i) === "e" || word.charAt(i) === "i" || word.charAt(i) === "o" || word.charAt(i) === "u"){
       letters += word.charAt(i).toUpperCase()
     }else{
       letters += word.charAt(i)
