@@ -16,8 +16,8 @@ const sumOfAll = array => {
   let total = 0;
   for (let i = 0; i < array.length; i++) {
     total = total + array[i];
-    console.log(total);
   }
+  console.log(total);
 };
 sumOfAll([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
@@ -76,15 +76,15 @@ evenNumbers(24, 48);
 //7 - Crea una función que genere 2 arrays y los rellene con 5 números aleatorios cada uno, la función debe decir qué valores se han repetido en los dos arrays.
 
 const randomNumber = () => {
-  let randomArray1 = []
-  let randomArray2 = []
-  let randomArray3 = []
+  let randomArray1 = [];
+  let randomArray2 = [];
+  let randomArray3 = [];
 
   for (let i = 0; i <= 4; i++) {
-    let firstNum = Math.floor(Math.random() * 11)
+    let firstNum = Math.floor(Math.random() * 6)
     randomArray1.push(firstNum)
     
-    let secondNum = Math.floor(Math.random() * 11)
+    let secondNum = Math.floor(Math.random() * 6)
     randomArray2.push(secondNum)
     }
   for (let i = 0; i < randomArray1.length; i++){
@@ -196,7 +196,7 @@ phrase("El mundo no es un problema; el problema es tu desconocimiento")
 const insert = (wordA, wordB) => {
   let mixLetters = ""
   let math = Math.max(wordA.length, wordB.length)
-  for(i=0; i <= math; i++){
+  for(let i=0; i <= math; i++){
     mixLetters+= wordA.charAt(i)+wordB.charAt(i)
   }
   console.log(mixLetters)
@@ -209,7 +209,7 @@ insert("adios","hola") // no estoy seguro si deberia de usar 2 if aqui para pala
 const newLetters = word => {
   let letters = ""
 
-  for(i = word.length -1; i >= 0; i--){
+  for(let i = word.length -1; i >= 0; i--){
 
     letters += word[i]
 
@@ -236,7 +236,7 @@ newLetters("Consejos") */
 
 const fiveLetters = array => {
   let newArray = []
-  for(i = 0; i < array.length; i++){
+  for(let i = 0; i < array.length; i++){
     newArray.push(array[i].charAt(0).toUpperCase())
     newArray.push(array[i].charAt(array[i].length-1).toUpperCase())
     
